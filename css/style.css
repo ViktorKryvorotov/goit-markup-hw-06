@@ -642,6 +642,7 @@ background: var(--akcent-color);
     flex-direction: column;
 }
 .form-input {
+    position: relative;
     display: block;
     font: inherit;
     font-size: 14px;
@@ -655,8 +656,12 @@ background: var(--akcent-color);
     border-radius: 4px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-input:hover,.form-input:focus{
+.form-field:hover .form-icon,
+.form-field:hover .form-input,
+.form-input:focus .form-icon,
+.form-input:focus{
     border-color:var(--akcent-color);
+    fill: var(--akcent-color);
 }
 
 .form-comment{
@@ -666,26 +671,34 @@ background: var(--akcent-color);
     margin-bottom: 4px;
 }
 .form-button{
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-       
-        
-       
-        width: 200px;
-        height: 50px;
-        border-radius: 4px;
-        padding: 10px 52px;
-        background-color: var(--akcent-color);
-        color: var(--white-color);
-        cursor: pointer;
-        border-color: transparent;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        font-family: var(--main-font);
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 1.9;
-        letter-spacing: 0.06em;
-    }
-    .form-button:hover,.form-button:focus {
-    background-color: var(--button-hover);
-    }
-   
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    
+    
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    padding: 10px 52px;
+    background-color: var(--akcent-color);
+    color: var(--white-color);
+    cursor: pointer;
+    border-color: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-family: var(--main-font);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+}
+
+.form-button:hover,.form-button:focus {
+background-color: var(--button-hover);
+}
+.form-icon{
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+fill: var(--main-color);
+position: absolute;
+top: 50%;
+margin-left: 12px;
+cursor: pointer;
+}
