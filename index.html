@@ -434,6 +434,7 @@
         </div>
       </div>
     </footer>
+    <!--Модалка-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="btn-modal-close" data-modal-close>
@@ -441,6 +442,41 @@
             <use href="./imges/sprite.svg#icon-close-btn"></use>
           </svg>
         </button>
+        <h3 class="modal-tittle">Залиште свої дані, ми вам передзвонимо</h3>
+        <form class="form">
+          <div class="form-field">
+            <label for="name">Ім'я</label>
+            <input class="form-input" type="text" name="name" id="name" />
+          </div>
+          <div class="form-field">
+            <label for="tel">Телефон</label>
+            <input class="form-input" type="tel" name="tel" id="tel" />
+          </div>
+          <div class="form-field">
+            <label for="mail">Пошта</label>
+            <input class="form-input" type="email" name="mail" id="mail" />
+          </div>
+          <div class="form-field">
+            <label for="comment">Коментар</label>
+            <textarea
+              class="form-comment"
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+              placeholder="Введіть текст"
+            ></textarea>
+          </div>
+          <div class="form-field">
+            <input type="checkbox" name="contract" value="" id="contract" />
+            <label for="chekbox"
+              >Погоджуюся з розсилкою та приймаю Умови договору</label
+            >
+          </div>
+          <button class="form-button" type="button" data-modal-open>
+            Відправити
+          </button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
