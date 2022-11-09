@@ -477,18 +477,22 @@
               placeholder="Введіть текст"
             ></textarea>
           </div>
-          <div class="form-field">
+          <label class="agreement" for="checkbox">
             <input
               class="form-checkbox"
               type="checkbox"
-              name="contract"
+              name="agreement"
               value=""
-              id="contract"
+              id="agreement"
             />
-            <label for="checkbox"
-              >Погоджуюся з розсилкою та приймаю Умови договору</label
-            >
-          </div>
+            <svg class="icon-checkbox" width="16" height="15">
+              <use href="./imges/sprite.svg#icon-checkbox"></use>
+            </svg>
+          </label>
+          <span class="text-agreement"
+            >Погоджуюся з розсилкою та приймаю
+            <a href="#">Умови договору</a>
+          </span>
           <button class="form-button" type="submit">Відправити</button>
         </form>
       </div>
