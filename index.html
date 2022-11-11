@@ -432,6 +432,26 @@
             </li>
           </ul>
         </div>
+        <form class="form-subscribe">
+          <div>
+            <label for="subscribe-mail" class="form-subscribe-label">
+              Підпишіться на розсилку</label
+            >
+            <input
+              class="footer-input"
+              name="subscribe-mail"
+              id="subscribe-mail"
+              type="mail"
+              placeholder="e-mail"
+            />
+          </div>
+          <button class="subscribe-button">
+            Підписатися
+            <svg class="icon-subscribe-button" width="24" height="24">
+              <use href="./imges/sprite.svg#icon-send"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </footer>
     <!--Модалка-->
@@ -477,22 +497,21 @@
               placeholder="Введіть текст"
             ></textarea>
           </div>
-          <label class="agreement" for="checkbox">
+          <label class="agreement">
             <input
               class="form-checkbox"
               type="checkbox"
               name="agreement"
-              value=""
-              id="agreement"
+              value="agree"
             />
             <svg class="icon-checkbox" width="16" height="15">
               <use href="./imges/sprite.svg#icon-checkbox"></use>
             </svg>
+            <span class="text-agreement"
+              >Погоджуюся з розсилкою та приймаю
+              <a class="contract-text" href="#">Умови договору</a>
+            </span>
           </label>
-          <span class="text-agreement"
-            >Погоджуюся з розсилкою та приймаю
-            <a href="#">Умови договору</a>
-          </span>
           <button class="form-button" type="submit">Відправити</button>
         </form>
       </div>

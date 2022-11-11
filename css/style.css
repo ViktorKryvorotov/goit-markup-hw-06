@@ -62,7 +62,7 @@ img {
     /* outline: 2px dashed blueviolet; */
 }
 .current {
-    color: blue;
+    color:var(--akcent-color);
     position: relative;
     
 }
@@ -456,6 +456,79 @@ address{
 .footer-contacts:hover, .footer-contacts:focus,.footer-address:hover,.footer-address:focus {
     color:var(--akcent-color);
 }
+.social-title {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.142;
+
+}
+.form-subscribe{
+    display: flex;
+    margin-left: 93px;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.form-subscribe-label {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color:var(--white-color);
+    margin-bottom: 20px;
+
+}
+.footer-input{
+    display: block;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color:var(--white-color);
+    width: 358px;
+    height: 50px;
+    margin: 0;
+    padding: 15px 16px;
+    cursor: pointer;
+    border: 1px solid #FFFFFF4D;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-input:hover,.footer-input:focus {
+    border-color: var(--akcent-color);
+}
+
+.subscribe-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color:var(--white-color);
+    background-color:var(--akcent-color);
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+    border-radius: 4px;
+    border: transparent;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-button:hover,
+.subscribe-button:focus {
+    background-color: var(--button-hover);
+}
+.icon-subscribe-button{
+  fill: var(--white-color);
+  display: inline-flex;
+}
 
 /*Портфоліо*/
 /*Проекти*/
@@ -722,6 +795,14 @@ cursor: pointer;
     border-color: var(--akcent-color);
     outline-color: var(--akcent-color);
 }
+.form-checkbox{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+
+    
+}
 .agreement{
     display: flex;
     align-items: center;
@@ -732,6 +813,16 @@ cursor: pointer;
     letter-spacing: 0.03em;
     color: var(--basic-text-color);
 }
-.text-agreement{
-    display: block;
+.icon-checkbox{
+  
+}
+.form-checkbox:checked+.icon-checkbox {
+    background-image: url(../imges/icon-check.svg);
+    background-size: contain;
+}
+.text-agreement{ 
+    color: var(--secondary-color);
+}
+.contract-text{
+    color: var(--akcent-color);
 }
