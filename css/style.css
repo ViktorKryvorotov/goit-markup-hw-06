@@ -17,7 +17,7 @@
     --footer-contact-color:rgba(255, 255, 255, 0.6);
     --icon-color: #AFB1B8;
     --akcent-color-transparency:rgba(33, 150, 243, 0.9);
-
+    --boder-color:#21212133;
 }
 body{
     background-color:var(--white-color);
@@ -694,7 +694,7 @@ background: var(--akcent-color);
 }
    /* форма */
    .modal-tittle{
-    display: inline-block;
+    display: block;
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
@@ -710,11 +710,13 @@ background: var(--akcent-color);
 .form-field{
     position: relative;
     width: 448px;
-    /* height: 58px;  */
     margin-bottom: 10px;
     text-align: left;
     display: flex;
     flex-direction: column;
+}
+.form-field-comment{
+    margin-bottom: 0;
 }
 .form-input {
     position: relative;
@@ -724,7 +726,7 @@ background: var(--akcent-color);
     margin: 0;
     padding: 11px 12px 11px 42px;
     cursor: pointer;
-    border: 1px solid #21212133;
+    border: 1px solid var(--boder-color);
     border-radius: 4px; 
 
     font: inherit;
@@ -737,7 +739,7 @@ background: var(--akcent-color);
 }
 .form-field:hover .form-icon,
 .form-field:hover .form-input,
-.form-input:focus .form-icon,
+.form-input:focus +.form-icon,
 .form-input:focus{
     border-color:var(--akcent-color);
     fill: var(--akcent-color);
@@ -748,13 +750,46 @@ background: var(--akcent-color);
 .form-field>label{
     margin-bottom: 4px;
 }
+.form-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: var(--main-color);
+    position: absolute;
+    top: 50%;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.form-comment {
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    display: block;
+    resize: none;
+    padding: 12px 16px;
+    margin-bottom: 0;
+    width: 100%;
+    height: 120px;
+    border: 1px solid var(--boder-color);
+
+    font-size: 14px;
+    line-height: 1.67;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    color: var(--main-color);
+
+}
+
+.form-comment:hover,
+.form-comment:focus {
+    border-color: var(--akcent-color);
+    outline-color: var(--akcent-color);
+}
+
 .form-button{
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
     
     margin-top: 30px;
     width: 200px;
-    height: 50px;
     border-radius: 4px;
     padding: 10px 52px;
     background-color: var(--akcent-color);
@@ -773,46 +808,14 @@ background: var(--akcent-color);
 .form-button:hover,.form-button:focus {
 background-color: var(--button-hover);
 }
-.form-icon{
-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-fill: var(--main-color);
-position: absolute;
-top: 50%;
-margin-left: 12px;
-cursor: pointer;
-}
-.form-comment{
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-    display: block;
-    resize:none;
-    padding: 12px 16px;
-    margin-bottom: 0;
-    width: 100%;
-    height: 120px;
-    border: 1px solid #21212133;
-    
-    font-size: 12px;
-    line-height: 1.67;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-    cursor: pointer;
-
-}
-.form-field:hover .form-comment,
-.form-field:hover .form-comment{
-    border-color: var(--akcent-color);
-    outline-color: var(--akcent-color);
-}
 /* чекбокс  */
 .form-checkbox{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    position: absolute;
-
-    
+    position: absolute;  
 }
+
 .agreement{
     display: flex;
     align-items: center;
@@ -838,18 +841,17 @@ background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
-.form-checkbox:focus+.icon-checkbox{
-    outline: 2px solid var(--main-color);
-}
 .form-checkbox:checked+.icon-checkbox{
     background-color: var(--akcent-color);
     border-color: transparent;
     background-origin: content-box;
     outline-color: transparent;
 }
-.form-checkbox:hover+.icon-checkbox{
-outline-color: transparent;
+.form-checkbox:focus+.icon-checkbox,.form-checkbox:hover+.icon-checkbox {
+    outline: 2px solid var(--akcent-color);
+    border-color: transparent;
 }
+
 .text-agreement{
 user-select: none;
 }
